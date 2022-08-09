@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    margin: 0;
+    background-color: #F5F5F5;
+    font-family: Open Sans;
+    font-size: 1.525rem;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6;
+}
+
+nav {
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #c8ced3;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 55px;
+    z-index: 1020;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0;
+    line-height: 0;
+}
+
+.navbar-logo {
+    height: 24px;
+    width: auto;
+}
+
+.navbar-profile {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 20px;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    background-color: #0097DA;
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    top: 55px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 0;
+    z-index: 10;
+    display: none;
+}
+
+.sidebar.active {
+    display: block;
+}
+
+.main {
+    margin-top: 55px;
+}
+
+.role {
+    width: 200px;
+    height: 125.38px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #015581;
+    color: #fff;
+}
+
+.role-button {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #f18700;
+    outline: none;
+    border: 0;
+    border-radius: 6px;
+    color: #fff;
+    width: 93.84px;
+    height: 25px;
+    padding: 0px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;  
+    font-family: Open Sans;
+    cursor: pointer;
+}
+
+.role-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item {
+    font-size: 15.25px;
+    list-style-type: none;
+    background-color: #015581;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 7.5px 10px 7.5px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 13px;
+    height: 13px;
+    margin: 0px 3px 0px 0px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #1698DA;
+}
+
+a.nav-link {
+    color: #fff;
+}
+
+a:link.role-button {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:visited.role-button {
+    color: #fff;
+    text-decoration: none;
+}
+  
+a:hover.role-button {
+    color: #fff;
+    text-decoration: none;
+}
+  
+a:active.role-button {
+    color: #fff;
+    text-decoration: none;
+}
+
+.subtitle {
+    font-size: 16px;
+    padding: 12px 12px 0px 12px;
+}
+
+.section {
+    padding: 12px;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    word-wrap: break-word;
+    padding: 12px;
+    flex: 1 auto;
+}
+
+.card .card-inner {
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card-header {
+    padding: 1.25rem 1.25rem 0.75rem 1.25rem;
+    border-bottom: 1px solid #c8ced3;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card-search {
+    padding: 1.25rem 1.25rem 0rem 1.25rem;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search {
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 0.75rem 1.25rem 0rem 1.25rem;
+}
+
+.card-body.list-events {
+    padding: 1.25rem;
+}
+
+.card-body.large {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.card-footer {
+    padding: 0rem 1.25rem 1.25rem 1.25rem;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-footer.view-all {
+    justify-content: flex-end;
+    border-top: 1px solid #c8ced3;
+    padding: 1.25rem;
+    color: #F18700;
+}
+
+.green {
+    color: #75B642;
+    padding-right: 10px;
+}
+
+.red {
+    color: #D73930;
+    padding-right: 10px;
+}
+
+.navbar-toggler {
+    display: block;
+    background-color: white;
+    border: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.toggler-icon {
+    width: 20px;
+    height: 2.5px;
+    background-color: #333;
+    margin: 4px 0;
+    border-radius: 30px;
+}
+
+.card-body canvas { 
+    width: 100%!important;
+}
+
+.table-wrapper {
+    border: 1px solid #E5E5E5;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow:hidden;
+    border-radius: 10px;
+}
+  
+th, td {
+    text-align: left;
+    font-size: 14px;
+    padding: 12px 24px;
+}
+
+tr {
+    border-bottom: 1px solid #E5E5E5;
+}
+
+table tr:nth-child(odd) {
+    background-color: #F7F7F7;
+}
+  
+table tr:nth-child(even) {
+    background-color: white;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+.form-select {
+    height: 36px;
+    width: 80px;
+    border-radius: 10px;
+    border: 1px solid #E7E7E7;
+    text-align: center;
+    margin: 0px 5px;
+}
+
+.form-control {
+    height: 36px;
+    width: 200px;
+    text-align: center;
+    text-align: left;
+    padding: 0px 10px;
+    margin: 0px;
+}
+
+select:focus {
+    outline: none;
+}
+
+input[type=search], input[type=search]:focus {
+    border-radius: 10px;
+    border: 1px solid #E7E7E7;
+    border-right: none!important;
+    outline: none;
+}
+
+.search-button {
+    height: 36px;
+    border: 1px solid #E7E7E7;
+    border-left: none!important;
+    border-radius: 0px 10px 10px 0px;
+    background-color: white;
+    margin-left: -20px;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+.back-nav {
+    padding: 12px;
+}
+
+.back {
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 0 3px 0 rgb(0 0 0 / 20%);
+    cursor: pointer;
+}
+
+.fa-chevron-left {
+    font-size: 0.8em;
+}
+
+.event-picture {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin: 0px;
+    padding: 0px;
+    border: 4px solid white;
+}
+
+.event-header {
+    background-image: url('img/header.png');
+    border-radius: 10px 10px 0px 0px;
+    height: 334px;
+}
+
+.event-body {
+    padding: 0px 20px 32px 40px;
+    margin-top: -100px;
+    display: flex;
+}
+
+.event-wrapper {
+    padding: 118px 0px 0px 24px;
+}
+
+.event-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.event-subtitle {
+    color: #A2A2A2;
+    font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+    .sidebar {
+        display: block;
+    }
+
+    .container {
+        padding-left: 240px;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-logo {
+        margin-left: 20px;
+    }
+
+    .event-body {
+        padding: 0px 20px 32px 80px;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .card.chart {
+        flex: 2;
+    }
+}
