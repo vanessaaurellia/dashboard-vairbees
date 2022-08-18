@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapat Koordinasi Nasional Farmalkes 2022 - Dashboard Vairbees</title>
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/icons.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body onload="chart()">
+    <nav>
+        <button type="button" class="navbar-toggler" id="navbar=toggler" onclick="toggler()">
+            <div class="toggler-icon"></div>
+            <div class="toggler-icon"></div>
+            <div class="toggler-icon"></div>
+        </button>
+        <a href="#"><img class="navbar-logo" src="assets/img/logo-vairbees.png"></a>
+        <a href="#"><img class="navbar-profile" src="assets/img/profile.png"></a>
+    </nav>
+
+    <div class="container" id="container">
+        <div class="sidebar" id="sidebar">
+            <div class="role">
+                <div class="role-header">
+                    <div style="font-size: 15px;">Role</div>
+                    <button class="role-button">CHANGE</button>
+                </div>
+                <div style="font-size: 16px; margin-top: 30px;">Staff</div>
+                <div style="font-size: 14px;">Vairbees</div>
+                <div style="font-size: 14px;">BINUS UNIVERSITY</div>
+            </div>
+            <ul>
+                <li class="nav-item"><a class="nav-link active" href="index.html">
+                    <img class="icon" src="assets/img/icon-dashboard.png">
+                    Dashboard
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="main">
+            <div class="section">
+                <div class="back-nav" onclick="window.location='dashboard.html'">
+                    <span class="back">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                </div>
+
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="event-header">
+                                
+                            </div>
+                            <div class="event-body">
+                                <img class="event-picture" src="assets/img/rakonas.png">
+                                <div class="event-wrapper"> 
+                                    <div class="event-title">
+                                        Rapat Koordinasi Nasional Farmalkes 2022
+                                    </div>
+                                    <div class="event-subtitle">
+                                        04 - 05 April 2022
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subtitle">
+                    Overview
+                </div>
+
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-header">
+                                Total page view
+                            </div>
+                            <div class="card-body large" id="displayPageview">
+                                800.000
+                            </div>
+                            <div class="card-footer">
+                                Since 6 months
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-header">
+                                Total user
+                            </div>
+                            <div class="card-body large" id="displayUser">
+                                80.000
+                            </div>
+                            <div class="card-footer">
+                                Since 6 months
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-header">
+                                Total session
+                            </div>
+                            <div class="card-body large" id="displayTotalSession">
+                                32.500
+                            </div>
+                            <div class="card-footer">
+                                Since 6 months
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-header">
+                                Total avg visit time
+                            </div>
+                            <div class="card-body large" >
+                                <span id="displayAvgVisit">160</span> S
+                            </div>
+                            <div class="card-footer">
+                                Since 6 months
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subtitle">
+                    User Behaviour
+                </div>
+    
+                <div class="card-wrapper">
+                    <div class="card chart">
+                        <div class="card-inner">
+                            <div class="card-header">
+                                Page view
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <canvas id="myChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card chart">
+                        <div class="card-inner">
+                            <div class="card-header">
+                                User
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <canvas id="myChart2"></canvas>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-wrapper">
+                    <div class="card chart">
+                        <div class="card-inner">
+                            <div class="card-header">
+                                Session
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <canvas id="myChart3"></canvas>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card chart">
+                        <div class="card-inner">
+                            <div class="card-header">
+                                Avg visit time
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <canvas id="myChart4"></canvas>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-wrapper">
+                    <div class="card chart">
+                        <div class="card-inner">
+                            <div class="card-header">
+                                User devices
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <canvas id="myChart5"></canvas>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card chart">
+                        <div class="card-inner">
+                            <div class="card-header">
+                                Top country
+                            </div>
+                            <div class="card-body">
+                                <div class="table-wrapper">
+                                    <table>
+                                        <tr>
+                                        <th>No</th>
+                                        <th>Country</th>
+                                        <th>Users</th>
+                                        </tr>
+                                        <tr>
+                                        <td>1</td>
+                                        <td>Indonesia</td>
+                                        <td>93%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>United States</td>
+                                            <td>2.9%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Singapore</td>
+                                            <td>2.5%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>South Korea</td>
+                                            <td>1.3%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Japan</td>
+                                            <td>0.3%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/script-1.js"></script>
+</body>
+
+</html>
